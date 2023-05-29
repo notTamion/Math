@@ -1,0 +1,9 @@
+name: Math
+version: '${project.version}'
+main: de.tamion.Math
+api-version: 1.19
+authors: [Tamion]
+description: Lets you do meth ingame
+
+commands:
+  math:
