@@ -6,11 +6,8 @@ import org.bukkit.command.CommandSender;
 import org.jetbrains.annotations.NotNull;
 import org.mariuszgromada.math.mxparser.Argument;
 import org.mariuszgromada.math.mxparser.Expression;
-import org.mariuszgromada.math.mxparser.PrimitiveElement;
 
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
 
 public class MathCommand implements CommandExecutor {
 
