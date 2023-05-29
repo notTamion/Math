@@ -4,10 +4,13 @@ import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.jetbrains.annotations.NotNull;
+import org.mariuszgromada.math.mxparser.Argument;
 import org.mariuszgromada.math.mxparser.Expression;
-import org.mariuszgromada.math.mxparser.License;
+import org.mariuszgromada.math.mxparser.PrimitiveElement;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 public class MathCommand implements CommandExecutor {
 
@@ -21,7 +24,9 @@ public class MathCommand implements CommandExecutor {
             sender.sendMessage("Please provide arguments");
             return false;
         }
-        Expression e = new Expression(String.join(" ", args));
+        String[] argums = String.join("", args).split(";");
+        Expression e = new Expression(argums[argums.length-1]);
+        Arrays.asList(Arrays.copyOf(argums,argums.length-1)).forEach(s -> e.addArguments(new Argument(s)));
         double v = e.calculate();
         sender.sendMessage("Result: " + v);
         return true;
