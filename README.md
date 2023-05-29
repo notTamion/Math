@@ -1,5 +1,6 @@
 # Math
-Lets you do meth in Minecraft
+Lets you do meth in Minecraft\
+Additional information: https://mathparser.org/
 ## Commands
 - /math {Expressions}
 ## Examples
@@ -9,3 +10,5 @@ Output: 8
 Output: 8
 ## Permissions
 - Math.math: /math
+
+For questions please contact me on Discord: Tamion#7835
