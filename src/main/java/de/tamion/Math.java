@@ -10,10 +10,6 @@ public final class Math extends JavaPlugin {
     public void onEnable() {
         getCommand("math").setExecutor(new MathCommand());
         License.iConfirmNonCommercialUse("Tamion");
-    }
-
-    @Override
-    public void onDisable() {
-
+        Metrics metrics = new Metrics(this, 19006);
     }
 }
